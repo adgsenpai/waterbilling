@@ -9,7 +9,7 @@ def find_pdfs(path):
     pdfs = []
     for root, dirs, files in os.walk(path):
         for file in files:
-            if file.endswith(".PDF"):
+            if file.endswith(".PDF") or file.endswith(".pdf"):
                 pdfs.append(os.path.join(root, file))
                 
     return pdfs
